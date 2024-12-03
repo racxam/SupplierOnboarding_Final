@@ -1,0 +1,60 @@
+{
+  "name": "SupplierOnboarding",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.13.8",
+    "@cap-js/postgres": "^1",
+    "@sap-cloud-sdk/resilience": "^3.24.0",
+    "@sap/cds": "^8",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-types": "^0.7.0",
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^8"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "sql": {
+      "native_hana_associations": false
+    },
+    "requires": {
+      "db": {
+        "kind": "sqlite"
+      },
+      "spa_process_destination": {
+        "kind": "rest",
+        "csrf": true,
+        "csrfInBatch": true,
+        "credentials": {
+          "destination": "spa_process_destination",
+          "path": "/workflow/rest/v1"
+        }
+      },
+      "GstApi": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "GstApi",
+          "requestTimeout": 10000,
+          "csrf": true
+        }
+      },
+      "ValidationAPI": {
+        "kind": "rest",
+        "credentials": {
+          "url": "https://api.rubixds.com",
+          "requestTimeout": 10000,
+          "csrf": true
+        }
+      },
+      "auth": "mocked"
+    }
+  }
+}

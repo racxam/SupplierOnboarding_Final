@@ -1,0 +1,32 @@
+ID,IncotermsCode,Description
+1,[001],Ex-Works Freight to pay
+2,[002],F.O.R.tptr.godown-yr end FTPay
+3,[004],Free del.to stores-Frgt.paid
+4,[AIR],AIR SHIPMENT
+5,[C&F],Cost & Freight
+6,[C&I],Cost & Insurance
+7,[CIF],Cost, insurance & freight
+8,[CPT],Carriage paid to
+9,[DAF],Delivered at frontier
+10,[DDP],Delivered Duty Paid
+11,[DDR],Door delivery
+12,[DDU],Delivered Duty Unpaid
+13,[EXW],Ex Works
+14,[FAS],Free Alongside Ship
+15,[FCA],Free Carrier
+16,[FD],Free Delivery
+17,[FH],Free house
+18,[FOB],Free on board
+19,[FOR],FREE ON ROAD
+20,[GDR],Godown Delivery
+21,[005],Free on Board. Freight
+22,[CFR],Costs and freight
+23,[CIP],Carriage and insurance paid
+24,[CNF],Cost & Freight
+25,[DAP],Delivered at Place
+26,[DAT],Delivered at Terminal
+27,[DEQ],Delivered ex quay (duty
+28,[DES],Delivered ex ship
+29,[ME4],EX OUR WORKS
+30,[ME5],EX YOUR WORKS
+31,[OXW],Ex Our Works

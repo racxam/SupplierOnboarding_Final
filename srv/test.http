@@ -1,0 +1,49 @@
+POST http://localhost:4004/OnboardingService/SupplierReqSrv
+Content-Type: application/json
+
+{
+    "SupplierSpendType": "SPEND_TYPE_A",
+    "SupplierType": "SUPPLIER_TYPE_A",
+    "VCodeCreateReqType": "CODE_CREATE_REQ_1",
+    "SupplierJustification": "Justification for supplier request",
+    "ExistingVendorCode": "VEN123456",
+    "ROVCreationReason": "New Vendor",
+    "ClosingROVVCode": "CLOSE_CODE_123",
+    "MMRelatedPartyVendorCode": true,
+    "NatureOfActivity": "Manufacturing",
+    "CompanyCode": "COMP123",
+    "VendorPlantCode": "PLANT_A",
+    "ReqVendorCode": "VENDOR123",
+    "DigressionVCodeUpto": "2024-12-31",
+    "Sector": ["Automobile", "Electronics"],
+    "Department": ["Procurement", "R&D"],
+    "FunAndSubFun": ["Production", "Design"],
+    "PANCardNo": "BDLPP0422Q",
+    "GSTIN": "05BDLPP0422Q1Z9",
+    "Status":"SUBMIT"
+}
+
+###
+GET http://localhost:4004/OnboardingService/SupplierReqSrv
+###
+GET http://localhost:4004/OnboardingService/SeqTrackerSrv
+
+
+### Test ValidatePAN Action
+POST http://localhost:4004/OnboardingService/ValidatePAN
+Content-Type: application/json
+
+{
+  "pan": "BDLPP0422Q"
+}
+
+
+
+
+### Test ValidateGST Action
+POST http://localhost:4004/OnboardingService/ValidateGST
+Content-Type: application/json
+
+{
+  "gst": "05BDLPP0422Q1Z9"
+}
